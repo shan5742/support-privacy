@@ -1,0 +1,184 @@
+@import "~sass-rem";
+
+//Size units
+
+$size-unit: 8px;
+$x1: $size-unit;
+$x2: $size-unit * 2;
+$x3: $size-unit * 3;
+$x4: $size-unit * 4;
+$x5: $size-unit * 5;
+$x6: $size-unit * 6;
+$x8: $size-unit * 8;
+
+$space-nano: $size-unit;
+$space-normal: $size-unit * 2;
+$space-large: $size-unit * 3;
+$space-mega: $size-unit * 4;
+$space-huge: $size-unit * 8;
+
+// Colours
+$light-green: #b2dfdb;
+$green: #009688;
+$dark-green: #004d40;
+$purple: #382f78;
+$yellow: #ffc234;
+$orange: #ff9c00;
+$red: #ff434f;
+$black: #000000;
+$white: #ffffff;
+$grey: #c6c6c6;
+
+$text-color: $black;
+
+// box-shadow
+
+$shadow: 9px 5px 9px -2px rgba(51, 51, 51, 0.65);
+
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+$font-default-values: (
+  stack: $font-family,
+  x-small: (
+    font-size: 10px,
+    line-height: 16px,
+    text-transform: uppercase,
+    letter-spacing: 1px,
+  ),
+  small: (
+    font-size: 12px,
+    line-height: 18px,
+  ),
+  base: (
+    font-size: 17px,
+    line-height: 24px,
+  ),
+  mid: (
+    font-size: 20px,
+    line-height: 28px,
+  ),
+  mid-large: (
+    font-size: 24px,
+    line-height: 28px,
+  ),
+  large: (
+    font-size: 28px,
+    line-height: 34px,
+  ),
+  x-large: (
+    font-size: 36px,
+    line-height: 40px,
+  ),
+  super: (
+    font-size: 56px,
+    line-height: 70px,
+  ),
+  crazy: (
+    font-size: 72px,
+    line-height: 72px,
+  ),
+);
+
+$weights: (
+  normal: 400,
+  medium: 600,
+  bold: 800,
+);
+
+@function _fontset-feature($set, $feature) {
+  $result: map-get(map-get($font-default-values, $set), $feature);
+  @return $result;
+}
+
+@function get-font-size($set) {
+  @return _fontset-feature($set, font-size);
+}
+
+@function get-line-height($set) {
+  @return _fontset-feature($set, line-height);
+}
+
+@mixin font-scale($font-size: "base", $font-weight: "normal") {
+  @if (map-has-key($map: $font-default-values, $key: $font-size) != true) {
+    @error ("could not find given font size: #{$font-size}");
+  }
+  @if (map-has-key($map: $weights, $key: $font-weight) != true) {
+    @error ("could not find given font weight: #{$font-weight}");
+  }
+  @each $property, $value in map-get($font-default-values, $font-size) {
+    #{$property}: $value;
+  }
+  font-size: var(--fs-#{$font-size}, rem(get-font-size($font-size)));
+  line-height: var(--lh-#{$font-size}, rem(get-line-height($font-size)));
+  font-weight: map-get($weights, $font-weight);
+}
+
+@mixin font-weight($font-weight: "normal") {
+  @if (map-has-key($map: $weights, $key: $font-weight) != true) {
+    @error ("could not find given font weight: #{$font-weight}");
+  }
+  font-weight: map-get($weights, $font-weight);
+}
+
+@mixin desktopTypeVariables {
+  --fs-x-small: #{rem(get-font-size(x-small))};
+  --lh-x-small: #{rem(get-line-height(x-small))};
+  --fs-small: #{rem(get-font-size(small))};
+  --lh-small: #{rem(get-line-height(small))};
+  --fs-base: #{rem(get-font-size(base))};
+  --lh-base: #{rem(get-line-height(base))};
+  --fs-mid: #{rem(get-font-size(mid))};
+  --lh-mid: #{rem(get-line-height(mid))};
+  --fs-mid-large: #{rem(get-font-size(mid-large))};
+  --lh-mid-large: #{rem(get-line-height(mid-large))};
+  --fs-large: #{rem(get-font-size(large))};
+  --lh-large: #{rem(get-line-height(large))};
+  --fs-x-large: #{rem(get-font-size(x-large))};
+  --lh-x-large: #{rem(get-line-height(x-large))};
+  --fs-super: #{rem(get-font-size(super))};
+  --lh-super: #{rem(get-line-height(super))};
+  --fs-crazy: #{rem(get-font-size(crazy))};
+  --lh-crazy: #{rem(get-line-height(crazy))};
+}
+
+@mixin mobileTypeVariables {
+  --fs-x-small: #{rem(10px)};
+  --lh-x-small: #{rem(16px)};
+  --fs-small: #{rem(12px)};
+  --lh-small: #{rem(18px)};
+  --fs-base: #{rem(15px)};
+  --lh-base: #{rem(24px)};
+  --fs-mid: #{rem(20px)};
+  --lh-mid: #{rem(24px)};
+  --fs-mid-large: #{rem(24px)};
+  --lh-mid-large: #{rem(28px)};
+  --fs-large: #{rem(28px)};
+  --lh-large: #{rem(30px)};
+  --fs-x-large: #{rem(36px)};
+  --lh-x-large: #{rem(36px)};
+  --fs-super: #{rem(56px)};
+  --lh-super: #{rem(70px)};
+  --fs-crazy: #{rem(72px)};
+  --lh-crazy: #{rem(72px)};
+}
+
+html,
+body {
+  min-height: 100vh;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  color: $text-color;
+}
+
+:root {
+  @include desktopTypeVariables();
+}
+
+input,
+button {
+  font-family: $font-family;
+}

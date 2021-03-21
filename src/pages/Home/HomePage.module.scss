@@ -1,0 +1,27 @@
+@import "../../styles/globals.scss";
+
+.pageTitle {
+  @include font-scale("super", bold);
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+
+  @media (max-width: 700px) {
+    @include font-scale("large", bold);
+  }
+}
+
+.subtitle {
+  @include font-scale("large");
+  text-align: center;
+
+  @media (max-width: 700px) {
+    @include font-scale("mid");
+  }
+}
+
+.altSection {
+  padding: $space-huge 0;
+  max-width: 800px;
+  margin: auto;
+}

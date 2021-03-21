@@ -1,0 +1,21 @@
+@import "../../styles/globals.scss";
+
+.pageTitle {
+  @include font-scale("super", bold);
+  text-align: center;
+  padding: $x4 0;
+  margin: auto;
+
+  @media (max-width: 700px) {
+    @include font-scale("large", bold);
+  }
+}
+
+.wrapper {
+  max-width: 700px;
+  margin: auto;
+}
+
+.contentHeading {
+  @include font-scale("large", bold);
+}

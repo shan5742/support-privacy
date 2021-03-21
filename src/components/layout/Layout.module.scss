@@ -1,0 +1,12 @@
+@import "../../styles/globals.scss";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 0 $x4 $x4 $x4;
+}

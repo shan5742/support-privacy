@@ -1,0 +1,33 @@
+@import "../../styles/globals.scss";
+
+.collapsibleSection {
+  padding-bottom: $x3;
+  border-bottom: 1px solid $grey;
+}
+
+.collapsibleSection:not(:first-of-type) {
+  padding-top: $x3;
+}
+
+.collapsibleTitleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  & svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.collapsibleTitle {
+  @include font-scale("base");
+  margin: 0;
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 8px;
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../styles/globals.scss";
+
+.header {
+  display: flex;
+  padding: $x2;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  @include font-scale("super", bold);
+
+  @media (max-width: 700px) {
+    @include font-scale("large", bold);
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.nav {
+  ul {
+    display: flex;
+    list-style: none;
+
+    li {
+      margin: 0 $x2;
+
+      @media (max-width: 700px) {
+        margin: 0 $x1;
+      }
+
+      a {
+        text-decoration: none;
+        color: $text-color;
+        @include font-scale("mid", bold);
+
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color: $green;
+        }
+      }
+    }
+  }
+}
