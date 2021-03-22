@@ -10,6 +10,7 @@ export const Header = (props: Props) => {
       <div className={s.logo}>
         <Link to="/">🔐</Link>
       </div>
+
       <nav className={s.nav}>
         <ul>
           <li>
