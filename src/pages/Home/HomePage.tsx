@@ -33,94 +33,94 @@ export const HomePage = (props: Props) => {
 
       <div className={s.altSection}>
         <CollapsibleSection icon={SiGmail} title="Alternatives for Gmail">
-          <h1>hello</h1>
+          <h1>Coming soon</h1>
         </CollapsibleSection>
         <CollapsibleSection
           icon={SiGooglechrome}
           title="Alternatives for Google Chrome"
         >
-          <h1>hello</h1>
+          <h1>Coming soon</h1>
         </CollapsibleSection>
         <CollapsibleSection
           icon={SiGooglemaps}
           title="Alternatives for Google Maps"
         >
-          <h1>hello</h1>
+          <h1>Coming soon</h1>
         </CollapsibleSection>
         <CollapsibleSection
           icon={SiGoogle}
           title="Alternatives for Google Search"
         >
-          <h1>hello</h1>
+          <h1>Coming soon</h1>
         </CollapsibleSection>
         <CollapsibleSection
           icon={TiImage}
           title="Alternatives for Google Images"
         >
-          <h1>hello</h1>
+          <h1>Coming soon</h1>
         </CollapsibleSection>
         <CollapsibleSection
           icon={TiWeatherPartlySunny}
           title="Alternatives for Google Weather"
         >
-          <h1>hello</h1>
+          <h1>Coming soon</h1>
         </CollapsibleSection>
         <CollapsibleSection
           icon={RiLockPasswordFill}
           title="Alternatives for Google Password Manager"
         >
-          <h1>hello</h1>
+          <h1>Coming soon</h1>
         </CollapsibleSection>
         <CollapsibleSection icon={SiYoutube} title="Alternatives for Youtube">
-          <h1>hello</h1>
+          <h1>Coming soon</h1>
         </CollapsibleSection>
         <CollapsibleSection
           icon={SiGoogledrive}
           title="Alternatives for Google Drive"
         >
-          <h1>hello</h1>
+          <h1>Coming soon</h1>
         </CollapsibleSection>
         <CollapsibleSection
           icon={GiArrowFlights}
           title="Alternatives for Google Flights"
         >
-          <h1>hello</h1>
+          <h1>Coming soon</h1>
         </CollapsibleSection>
         <CollapsibleSection
           icon={SiGooglesheets}
           title="Alternatives for Google Sheets"
         >
-          <h1>hello</h1>
+          <h1>Coming soon</h1>
         </CollapsibleSection>
         <CollapsibleSection
           icon={SiReadthedocs}
           title="Alternatives for Google Docs"
         >
-          <h1>hello</h1>
+          <h1>Coming soon</h1>
         </CollapsibleSection>
         <CollapsibleSection
           icon={RiFileLockFill}
           title="Alternatives for Google Authenticator"
         >
-          <h1>hello</h1>
+          <h1>Coming soon</h1>
         </CollapsibleSection>
         <CollapsibleSection
           icon={SiGooglehangouts}
           title="Alternatives for Google Hangouts"
         >
-          <h1>hello</h1>
+          <h1>Coming soon</h1>
         </CollapsibleSection>
         <CollapsibleSection
           icon={SiGoogleanalytics}
           title="Alternatives for Google Analytics"
         >
-          <h1>hello</h1>
+          <h1>Coming soon</h1>
         </CollapsibleSection>
         <CollapsibleSection
           icon={SiGoogletranslate}
           title="Alternatives for Google Translate"
         >
-          <h1>hello</h1>
+          <h1>Coming soon</h1>
         </CollapsibleSection>
       </div>
     </Layout>
